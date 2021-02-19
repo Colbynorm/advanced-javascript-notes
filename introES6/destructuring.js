@@ -49,3 +49,7 @@ const obj1 = { firstName1: 'Colby', middleName1: 'Stewart', lastName1: 'Norman' 
 const { firstName1, ...otherNames } = obj1;
 console.log(firstName1);
 console.log(otherNames);
+
+const data1 = { arr: [ 1, 2, 3 ] };
+const { arr: [ , v2 ] } = data1;
+console.log(v2);
