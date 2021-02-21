@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 style="text-align: center; color: silver; font-family: monospace;">Check out my notes</h1>
+
+    <div id="exampleDiv">This is a test</div>
+
+    <div id="id1">Another test</div>
+    <img class="class">
+
+    <button id="button1">Click Here!</button>
+
+    <div id="div1">Click Here Next!</div>
+
+</body>
+</html>
+
+<script>
+
+    const elem = document.getElementById('exampleDiv');
+
+    const elem1 = document.querySelector('img.class');
+    const elems = document.querySelectorAll('img.class, #id1');
+
+    const button1 = document.getElementById('button1');
+    button1.addEventListener('click', () => {
+        alert('Clicked');
+    }, false);
+
+    const div1 = document.getElementById('div1');
+    div1.addEventListener('click', (e) => {
+        e.target.style.backgroundColor = 'red';
+    }, false);
+
+</script>
