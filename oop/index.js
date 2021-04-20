@@ -22,3 +22,18 @@ console.log(colby instanceof Person);
 
 
 //Prototypes
+console.log(Person.prototype);
+
+Person.prototype.calcAge = function() {
+    console.log(2021 - this.birthYear);
+};
+
+colby.calcAge();
+linnea.calcAge();
+
+console.log(colby.__proto__);
+console.log(colby.__proto__ === Person.prototype);
+console.log(Person.prototype.isPrototypeOf(colby));
+
+Person.prototype.species = 'Guys';
+console.log(colby.species, linnea);
