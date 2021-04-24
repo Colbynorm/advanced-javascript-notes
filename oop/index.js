@@ -64,6 +64,12 @@ class PersonClass {
     get age() {
         return 2021 - this.dob;
     }
+
+    //static method
+    static hey() {
+        console.log('Hey Whats Up');
+        console.log(this);
+    }
 }
 
 const frodo = new PersonClass('Frodo', 1900);
@@ -71,6 +77,7 @@ console.log(frodo);
 frodo.calcAge1();
 console.log(frodo.age);
 frodo.greet();
+PersonClass.hey();
 
 
 
