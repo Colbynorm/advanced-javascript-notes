@@ -37,3 +37,32 @@ console.log(Person.prototype.isPrototypeOf(colby));
 
 Person.prototype.species = 'Guys';
 console.log(colby.species, linnea);
+
+
+
+//Classes
+
+//expression
+const PersonCl = class {
+}
+
+//declaration
+class PersonClass {
+    constructor(dogName, dob) {
+        this.dogName = dogName;
+        this.dob = dob;
+    }
+
+    calcAge1() {
+        console.log(2021 - this.dob);
+    }
+
+    greet() {
+        console.log(`Hey ${this.dogName}`);
+    }
+}
+
+const frodo = new PersonClass('Frodo', 1900);
+console.log(frodo);
+frodo.calcAge1();
+frodo.greet();
