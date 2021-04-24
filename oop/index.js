@@ -60,9 +60,37 @@ class PersonClass {
     greet() {
         console.log(`Hey ${this.dogName}`);
     }
+
+    get age() {
+        return 2021 - this.dob;
+    }
 }
 
 const frodo = new PersonClass('Frodo', 1900);
 console.log(frodo);
 frodo.calcAge1();
+console.log(frodo.age);
 frodo.greet();
+
+
+
+
+//Setters and Getters
+
+const account = {
+    owner: 'Colby',
+    movements: [200, 530, 120, 300],
+
+    get latest() {
+        return this.movements.slice(-1).pop();
+    },
+
+    set latest(mov) {
+        this.movements.push(mov);
+    }
+};
+
+console.log(account.latest);
+
+account.latest = 50;
+console.log(account.movements);
